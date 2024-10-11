@@ -1,0 +1,13 @@
+.filledHeart:hover {
+  fill: var(--red_light);
+}
+.filledHeart__red {
+  fill: var(--red_error);
+}
+
+.Heart__red:hover {
+  fill: var(--red_light);
+}
+.Heart {
+  fill: var(--red_error);
+}

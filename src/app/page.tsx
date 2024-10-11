@@ -1,95 +1,48 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./css/mainpage.module.css";
+import Sidebar from "./components/sidebar/Sidebar";
+import ProgressCircle from "./components/progressCircle/ProgressCircle";
+import FilledHeart from "./components/hearts/FilledHeart";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.hero}>
+          <div className={styles.hero_background}></div>
+          <Image
+            width={1440}
+            height={435}
+            src={"/assets/hero_kungfu_panda.png"}
+            className={styles.hero_img}
+            alt="kung fu panda"
+            priority
+          />
+          <div className={styles.hero_info}>
+            <div className={styles.hero_title}>
+              <h1>Kung Fu Panda 4</h1>
+            </div>
+            <div className={styles.hero_info_text}>
+              <p>
+                Join Po and the Furious Five on a new epic adventure! Discover
+                the power of friendship and the strength within! Get ready to
+                unleash your inner warrior! 🥋✨
+              </p>
+            </div>
+            <div className={styles.hero_info_stadistics}>
+              <FilledHeart />
+              <ProgressCircle percentage={97} colour="#4DA14F" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.content}>
+          <Sidebar />
+          <article className={styles.categories}>
+            <div>MOVIE</div>
+          </article>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }
