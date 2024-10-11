@@ -3,26 +3,30 @@
 import FilledHeart from "../hearts/FilledHeart";
 import dynamic from "next/dynamic";
 import styles from "./moviecard.module.css";
+import Link from "next/link";
 
 interface PropsMovieCard {
   title: string;
   date: string;
   url: string;
+  id: string;
 }
 const ProgressCircle = dynamic(
   () => import("../progressCircle/ProgressCircle"),
   { ssr: false }
 );
-const MovieCard = ({ title, date, url }: PropsMovieCard) => {
+const MovieCard = ({ title, date, url, id }: PropsMovieCard) => {
   return (
     <div className={styles.card}>
-      <img
-        className={styles.card_image}
-        src={url}
-        width={200}
-        height={223}
-        alt={title}
-      />
+      <Link href={`/movie/${id}`}>
+        <img
+          className={styles.card_image}
+          src={url}
+          width={200}
+          height={223}
+          alt={title}
+        />
+      </Link>
       <div className={styles.card_info}>
         <h2>{title}</h2>
         <span>{date}</span>

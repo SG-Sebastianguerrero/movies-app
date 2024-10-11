@@ -2,8 +2,9 @@ import styles from "./sidebar.module.css";
 const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
+      {/* TODO */}
       Search
-      <input type="search" name="" id="" />
+      <input type="search" name="search" placeholder="Keywords" />
       Genres
       <select name="" id="">
         <option value="1">genre 1</option>

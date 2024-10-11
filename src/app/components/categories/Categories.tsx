@@ -51,7 +51,8 @@ const Categories = () => {
                       title={movie.original_title}
                       date={movie.release_date}
                       url={movie.poster_path}
-                      key={`${category}${index}`}
+                      key={`${movie._id}`}
+                      id={`${movie._id}`}
                     />
                   );
                 }

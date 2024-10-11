@@ -9,6 +9,7 @@
   width: 200;
   min-height: 335px;
   height: auto;
+  cursor: pointer;
 }
 .card_image {
   object-fit: cover;
@@ -32,7 +33,7 @@
 .card_popularity {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   height: 45px;
   width: 100%;
 }
