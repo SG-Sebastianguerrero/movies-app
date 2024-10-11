@@ -1,0 +1,24 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.category {
+  color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 0 24px;
+  width: auto;
+}
+
+.category_movies {
+  color: white;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+  overflow-x: hidden;
+  padding: 24px 0;
+  width: auto;
+}

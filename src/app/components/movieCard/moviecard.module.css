@@ -1,0 +1,46 @@
+.card {
+  width: 200px;
+  border-radius: 8px;
+  background: var(--gray_neutral_900);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 200;
+  min-height: 335px;
+  height: auto;
+}
+.card_image {
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+.card_info h2 {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.card_info span {
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  font-weight: 400;
+}
+.card_popularity {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 45px;
+  width: 100%;
+}
+.card_popularity_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 59px;
+}

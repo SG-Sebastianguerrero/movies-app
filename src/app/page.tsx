@@ -3,6 +3,7 @@ import styles from "./css/mainpage.module.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ProgressCircle from "./components/progressCircle/ProgressCircle";
 import FilledHeart from "./components/hearts/FilledHeart";
+import Categories from "./components/categories/Categories";
 
 export default function Home() {
   return (
@@ -31,15 +32,18 @@ export default function Home() {
             </div>
             <div className={styles.hero_info_stadistics}>
               <FilledHeart />
-              <ProgressCircle percentage={97} colour="#4DA14F" />
+              <ProgressCircle
+                fontSize={"1.3rem"}
+                size={92}
+                percentage={97}
+                strokeSize={"0.5rem"}
+              />
             </div>
           </div>
         </div>
         <div className={styles.content}>
           <Sidebar />
-          <article className={styles.categories}>
-            <div>MOVIE</div>
-          </article>
+          <Categories />
         </div>
       </main>
       <footer className={styles.footer}></footer>

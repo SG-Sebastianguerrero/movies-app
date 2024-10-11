@@ -5,6 +5,3 @@
 .circle {
   transition: all 0.7s ease-in-out;
 }
-.svgProgress {
-  scale: 0.65;
-}
